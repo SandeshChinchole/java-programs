@@ -11,6 +11,12 @@ public class CopyObjectsCar {
 		this.setYear(year);
 	}
 	
+	// overloaded copy constructor
+	
+	CopyObjectsCar(CopyObjectsCar x) {
+		this.copy(x);
+	}
+	
 	public String getMake() {
 		return make;
 	}
