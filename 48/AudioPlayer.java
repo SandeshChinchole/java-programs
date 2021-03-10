@@ -14,9 +14,25 @@ public class AudioPlayer {
 		Clip clip = AudioSystem.getClip();
 		clip.open(audioStream);
 		
-		clip.start();
+		String response = "";
 		
-		String response = scanner.next();
+		while(!response.equals("Q")) {
+			System.out.println("P = Play, S = Stop, R = Reset, Q = Quit");
+			System.out.print("Enter your choice: ");
+			
+			response = scanner.next();
+			response = response.toUpperCase();
+			
+			switch(response) {
+				case("P"): clip.start();
+				break;
+				case("S"): clip.stop();
+				break;
+				default: System.out.println("Not a valid response");
+			}
+		}
+		
+		
 	}
 
 }
