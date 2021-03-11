@@ -28,10 +28,16 @@ public class AudioPlayer {
 				break;
 				case("S"): clip.stop();
 				break;
+				case("R"): clip.setMicrosecondPosition(0);
+				break;
+				case("Q"): clip.close();
+				break;
 				default: System.out.println("Not a valid response");
 			}
 		}
 		
+		System.out.println("Goodbye");
+		scanner.close();
 		
 	}
 
